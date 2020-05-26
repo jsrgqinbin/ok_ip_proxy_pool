@@ -45,3 +45,7 @@ def run():
     scheduler.add_job(expiration_validator.run, 'interval', seconds=EXPIRATION_VALIDATOR['interval'])
     scheduler.start()
     app.run(host=WEB_SERVER['host'], port=WEB_SERVER['port'])
+
+
+if __name__ == '__main__':
+    crawl()

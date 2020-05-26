@@ -19,6 +19,7 @@ class AbsSpider(object):
         res = []
         for url in self._urls:
             try:
+                logger.info(f'{url} 链接开始爬取...')
                 for page in self.get_page_range():
                     async with aiohttp.ClientSession() as session:
                         async with session.get(self.get_page_url(url, page), headers=HEADERS) as resp:

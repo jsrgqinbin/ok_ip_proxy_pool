@@ -1,4 +1,5 @@
-from src.runner import run
+from src.runner import run, crawl
 
 if __name__ == '__main__':
-    run()
+    # run()
+    crawl()
